@@ -25,13 +25,30 @@ for x in $array; do
 
 if [[ "$DIFF" != "" ]]; then
    if [[ "$app" == "central-js"  ]]; then
-    echo 'change in' $x'_Central-front'
-#   curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec" 
-         elif [[ "$x" == "test_alpha-old" ]] || [[ "$x" == "test_beta-old" ]] || [[ "$x" == "PROD-Double" ]]; then
+      echo 'change in' $x'_Central-front'
+         
+         if [[ "$x" == "test_alpha-old" ]] || [[ "$x" == "test_beta-old" ]] || [[ "$x" == "PROD-Double" ]]; then
             TOKEN=$5
-#     curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins-backup.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec"
-      echo 'change in' $x'_Front_Central'
+            #curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins-backup.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec"
+         elif
+            #curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec" 
+         fi
+
+#      echo 'change in' $x'_Front_Central'
 fi
+
+
+
+
+# if [[ "$DIFF" != "" ]]; then
+#    if [[ "$app" == "central-js"  ]]; then
+#     echo 'change in' $x'_Central-front'
+# #   curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec" 
+#          elif [[ "$x" == "test_alpha-old" ]] || [[ "$x" == "test_beta-old" ]] || [[ "$x" == "PROD-Double" ]]; then
+#             TOKEN=$5
+# #     curl -k -XPOST --user $USER":"$TOKEN "https://ci-jenkins-backup.tech.igov.org.ua/job/"$x"_Front_Central/buildWithParameters?delay=0sec"
+#       echo 'change in' $x'_Front_Central'
+# fi
 
 #fi
        if [[ "$app" == "dashboard-js"  ]]; then
